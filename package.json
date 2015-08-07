@@ -15,7 +15,7 @@
     "url": "https://github.com/kristianmandrup/jade-markoa/issues"
   },
   "license": "MIT",
-  "main": "lib/jade-markoa",
+  "main": "lib/index",
   "bin": {
     "jade-markoa": "bin/jade-markoa.js"
   },
@@ -30,8 +30,7 @@
     "extend": "^3.0.0",
     "gulp": "^3.9.0",
     "jade": "^1.11.0",
-    "node-fs-extra": "^0.8.1",
-    "pencil": "gabrieleds/pencil#master"
+    "node-fs-extra": "^0.8.1"
   },
   "devDependencies": {
     "chai": "~2.1.2",

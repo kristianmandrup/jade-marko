@@ -7,11 +7,9 @@ var jadeMarko = require('./lib');
 gulp.task('jade:marko', function() {
   // custom jade compilation with Pencil using jade API
   gulp.src(['apps/**/*.jade'])
-      // filename: 'base', 
+      // filename: 'base',
       .pipe(jadeMarko({basedir: 'apps'}))
       .pipe(gulp.dest('./apps'))
-
-  // assert that app/index/index.marko is created and contains HTML as expected :)
 });
 
 // jshint files
