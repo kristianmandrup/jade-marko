@@ -29,6 +29,7 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "jade": "^1.11.0",
+    "node-fs-extra": "^0.8.1",
     "pencil": "gabrieleds/pencil#master"
   },
   "devDependencies": {
