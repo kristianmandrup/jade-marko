@@ -8,7 +8,7 @@ gulp.task('jade:marko', function() {
   // custom jade compilation with Pencil using jade API
   gulp.src(['apps/**/*.jade'])
       .pipe(jadeMarko())
-      .pipe(gulp.dest('./apps'));)
+      .pipe(gulp.dest('./apps'))
 
   // assert that app/index/index.marko is created and contains HTML as expected :)
 });
