@@ -18,6 +18,11 @@ gulp.task('jade:marko', function() {
 });
 ```
 
+Testing
+-------
+
+Delete the `.marko` files in `apps/index`. Run `gulp jade:marko` and check that `apps/index` now contains `.marko` files for the jade templates.
+
 Contributing
 ------------
 
