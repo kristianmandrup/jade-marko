@@ -1,0 +1,39 @@
+{
+  "name": "jade-markoa",
+  "description": "Jade compilation for Markoa templates",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kristianmandrup/jade-markoa",
+  "author": {
+    "name": "Kristian Mandrup",
+    "email": "kmandrup@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristianmandrup/jade-markoa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kristianmandrup/jade-markoa/issues"
+  },
+  "license": "MIT",
+  "main": "lib/jade-markoa",
+  "bin": {
+    "jade-markoa": "bin/jade-markoa.js"
+  },
+  "engines": {
+    "node": ">= 0.10.36",
+    "npm": ">=1.4.28"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "jade": "^1.11.0",
+    "pencil": "gabrieleds/pencil#master"
+  },
+  "devDependencies": {
+    "chai": "~2.1.2",
+    "mocha": "~2.2.1"
+  },
+  "keywords": []
+}
