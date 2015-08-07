@@ -30,7 +30,8 @@
     "extend": "^3.0.0",
     "gulp": "^3.9.0",
     "jade": "^1.11.0",
-    "node-fs-extra": "^0.8.1"
+    "node-fs-extra": "^0.8.1",
+    "through2": "^2.0.0"
   },
   "devDependencies": {
     "chai": "~2.1.2",
