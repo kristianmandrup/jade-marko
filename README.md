@@ -12,10 +12,33 @@ Use the `jadeMarko` transformation to compile jade files to marko files. Jade do
 gulp.task('jade:marko', function() {
   // custom jade compilation with Pencil using jade API
   gulp.src(['apps/**/*.jade'])
-      // filename: 'base',
-      .pipe(jadeMarko({basedir: 'apps'}))
+      .pipe(jadeMarko())
       .pipe(gulp.dest('./apps'))
 });
+```
+
+`layout.jade`
+
+```jade
+doctype html
+html
+  head
+    block title
+      title Default title
+  body
+    block content
+```
+
+`index.jade`
+
+```jade
+doctype html
+html
+  head
+    block title
+      title Default title
+  body
+    block content
 ```
 
 Testing

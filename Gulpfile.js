@@ -7,8 +7,7 @@ var jadeMarko = require('./lib');
 gulp.task('jade:marko', function() {
   // custom jade compilation with Pencil using jade API
   gulp.src(['apps/**/*.jade'])
-      // filename: 'base',
-      .pipe(jadeMarko({basedir: 'apps'}))
+      .pipe(jadeMarko())
       .pipe(gulp.dest('./apps'))
 });
 
