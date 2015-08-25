@@ -1,7 +1,7 @@
 {
   "name": "jade-marko",
   "description": "Gulp Jade task to compile into Marko templates",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/kristianmandrup/jade-marko",
   "author": {
     "name": "Kristian Mandrup",
