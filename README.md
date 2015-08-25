@@ -17,6 +17,30 @@ gulp.task('jade:marko', function() {
 });
 ```
 
+### Gotchas!
+
+In order for Jade to work correctly with Marko, there are a few little gotchas. Both Jade and Marko use the same special keywords for constructs, such as:
+
+-	if
+-	else
+-	var
+
+In order for Jade to not treat these as Jade language constructs, use `x-` equivalents like this:
+
+```jade
+xvar(a='17')
+xif(test='a = b')
+  $data.a
+xelse-if(test='a = c')
+  $data.c
+xelse
+  $data.d
+```
+
+Otherwise you are "good to go" with the usual Jade syntax. You can even mix in with Jade conditional logic if you like ;)
+
+### Example
+
 `layout.jade`
 
 ```jade
@@ -32,19 +56,47 @@ html
 `index.jade`
 
 ```jade
-doctype html
-html
-  head
-    block title
-      title Default title
-  body
-    block content
+extends layout.jade
+block title
+  title Article Title
+
+block content
+  h1 My Article
+
+  async-fragment(data="data")
+
+  xvar(a='17')
+  xif(test='a = b')
+    $data.a
+  xelse-if(test='a = c')
+    $data.c
+  xelse
+    $data.d
 ```
 
 Testing
 -------
 
 Delete the `.marko` files in `apps/index`. Run `gulp jade:marko` and check that `apps/index` now contains `.marko` files for the jade templates.
+
+`index.marko`
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Article Title</title>
+  </head>
+  <body>
+    <h1>My Article</h1>
+    <async-fragment data="data"></async-fragment>
+    <var a="17"></var>
+    <if test="a = b">$data.a</if>
+    <else-if test="a = c">$data.c</else-if>
+    <else>$data.d</else>
+  </body>
+</html>
+```
 
 Contributing
 ------------

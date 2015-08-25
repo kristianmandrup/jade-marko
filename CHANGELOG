@@ -1,3 +1,7 @@
+v0.1.2:
+  Resolve language construct conflicts by introducing special: `x-if`, `x-else` and `x-var` tags
+  which translate to correct Marko equivalents.
+
 v0.1.0:
   date: 2015-8-7
   changes:

@@ -13,7 +13,7 @@ var chai = require('chai'),
 
 chai.should();
 
-var jade-markoa = require('../lib/jade-markoa.js');
+var jade-markoa = require('../lib/index.js');
 
 describe('jade-markoa module', function() {
     describe('#awesome()', function() {

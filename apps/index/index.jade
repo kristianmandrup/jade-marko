@@ -7,3 +7,11 @@ block content
   h1 My Article
 
   async-fragment(data="data")
+
+  xvar(a='17')
+  xif(test='a = b')
+    $data.a
+  xelse-if(test='a = c')
+    $data.c
+  xelse
+    $data.d
