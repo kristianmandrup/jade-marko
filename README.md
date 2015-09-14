@@ -17,7 +17,36 @@ gulp.task('jade:marko', function() {
 });
 ```
 
-### Gotchas!
+### External packages
+
+In order to facilitate using templates from other packages with `extends` and `include` you can use the special `package::` prefix. This will calculate the relative path to the `node_modules` of your project, given you pass in a `rootPath` entry in your gulp options.
+
+Note: You can also pass: `log: true` to enable some basic logging.
+
+```js
+var options = {
+  rootPath:  __dirname,
+  log: true
+};
+
+gulp.src(['apps/**/*.jade'])
+    .pipe(jadeMarko(options))
+    .pipe(gulp.dest('./apps'))
+```
+
+Then use it in your templates like this
+
+```jade
+extends package::global/layout.jade
+```
+
+Which will resolve to something like:
+
+`extends ../../../node_modules/global/layout.jade`
+
+If you don't supply a `rootPath` option, `../../..` will be used as the default `rootPath`.
+
+### Conditionals
 
 In order for Jade to work correctly with Marko, there are a few little gotchas. Both Jade and Marko use the same special keywords for constructs, such as:
 
@@ -39,7 +68,7 @@ xelse
 
 Otherwise you are "good to go" with the usual Jade syntax. You can even mix in with Jade conditional logic if you like ;)
 
-### Example
+### Conditionals example
 
 `layout.jade`
 

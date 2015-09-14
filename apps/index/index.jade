@@ -1,4 +1,4 @@
-extends layout.jade
+extends package::global/layout.jade
 
 block title
   title Article Title
@@ -6,11 +6,11 @@ block title
 block content
   h1 My Article
 
-  async-fragment(data="data")
+  async-fragment(data="globalData.xxx")
 
   xvar(a='17')
   xif(test='a = b')
-    $data.a
+    $globalData.abc.x
   xelse-if(test='a = c')
     $data.c
   xelse

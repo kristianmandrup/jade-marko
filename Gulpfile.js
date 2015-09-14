@@ -4,11 +4,16 @@ var mocha = require('gulp-mocha');
 
 var jadeMarko = require('./lib');
 
+var options = {
+  rootPath:  __dirname,
+  log: true
+};
+
 gulp.task('jade:marko', function() {
   // custom jade compilation with Pencil using jade API
   gulp.src(['apps/**/*.jade'])
-      .pipe(jadeMarko())
-      .pipe(gulp.dest('./apps'))
+      .pipe(jadeMarko(options))
+      .pipe(gulp.dest('./apps'));
 });
 
 // jshint files
