@@ -46,6 +46,36 @@ Which will resolve to something like:
 
 If you don't supply a `rootPath` option, `../../..` will be used as the default `rootPath`.
 
+### Custom template folder aliases
+
+You can supply your own custom template folder aliases, similar to `package::`
+
+```js
+templateDirs: {
+  global: path.join(__dirname, 'global'),
+  layout: '../layouts',
+  'parent-layout': '../../layouts'
+}
+```
+
+Your jade file:
+
+```jade
+extends package::global/layout.jade
+extends parent-layout::base.jade
+extends mixin::list.jade
+```
+
+Pre-compiled jade file:
+
+```jade
+extends ../../../node_modules/global/layout.jade
+extends ../../layouts/base.jade
+extends ../mixins/list.jade
+```
+
+Which is then transformed to Marko ;)
+
 ### Conditionals
 
 In order for Jade to work correctly with Marko, there are a few little gotchas. Both Jade and Marko use the same special keywords for constructs, such as:

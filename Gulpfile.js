@@ -1,12 +1,18 @@
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var mocha = require('gulp-mocha');
-
+var path = require('path');
 var jadeMarko = require('./lib');
 
 var options = {
   rootPath:  __dirname,
-  log: true
+  log: true,
+  templateDirs: {
+    global: path.join(__dirname, 'global'),
+    layout: '../layouts',
+    mixin: '../mixins',
+    'parent-layout': '../../layouts'
+  }
 };
 
 gulp.task('jade:marko', function() {

@@ -1,7 +1,7 @@
 {
   "name": "jade-marko",
   "description": "Gulp Jade task to compile into Marko templates",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/kristianmandrup/jade-marko",
   "author": {
     "name": "Kristian Mandrup",
@@ -17,8 +17,8 @@
   "license": "MIT",
   "main": "lib/index",
   "engines": {
-    "node": ">= 0.11",
-    "npm": ">=1.4.28"
+    "node": ">= 3.0",
+    "npm": ">=2.10"
   },
   "scripts": {
     "test": "make test"
