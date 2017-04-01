@@ -1,6 +1,8 @@
 Jade compilation for Markoa templates
 =====================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/jade-marko.svg)](https://greenkeeper.io/)
+
 Getting Started
 ---------------
 
